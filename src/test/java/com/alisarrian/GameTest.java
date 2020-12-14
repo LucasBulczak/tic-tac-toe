@@ -13,7 +13,13 @@ public class GameTest {
     }
 
     @Test(expectedExceptions = RuntimeException.class)
-    void shouldThrowRuntimeExceptionWhenFieldOutsideOfBoard() {
-        game.play(4, 0);
+    void shouldThrowRuntimeExceptionWhenXOutsideOfBoard() {
+        game.play(4, 1);
     }
+
+    @Test(expectedExceptions = RuntimeException.class)
+    void shouldThrowRuntimeExceptionWhenYOutsideOfBoard() {
+        game.play(1, 4);
+    }
+
 }
