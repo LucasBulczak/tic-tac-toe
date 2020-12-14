@@ -8,17 +8,19 @@ public class Game {
     };
 
     void play(int x, int y) {
-        if (x < 1 || x > 3) {
-            throw new RuntimeException("X is outside board.");
-        }
-        if (y < 1 || y > 3) {
-            throw new RuntimeException("Y is outside board.");
-        }
+        checkRange(x);
+        checkRange(y);
 
         if (board[x - 1][y - 1] != "") {
             throw new RuntimeException("This field is occupied.");
         } else {
             board[x - 1][y - 1] = "occupied";
+        }
+    }
+
+    private void checkRange(int coordinate) {
+        if (coordinate < 1 || coordinate > 3) {
+            throw new RuntimeException("Given coordinate is outside of the board.");
         }
     }
 }
