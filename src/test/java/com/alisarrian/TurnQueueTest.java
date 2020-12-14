@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.fail;
 
 public class TurnQueueTest {
     private TurnQueue turnQueue;
@@ -27,5 +28,12 @@ public class TurnQueueTest {
     void shouldReturnXAsActivePlayer() {
         Player actual = turnQueue.getActivePlayer();
         assertEquals(actual, X);
+    }
+
+    @Test
+    void shouldReturnYAsASecondPlayer() {
+        turnQueue.next();
+        Player actual = turnQueue.getActivePlayer();
+        assertEquals(actual, Y);
     }
 }
