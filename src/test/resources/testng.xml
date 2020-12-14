@@ -9,6 +9,7 @@
     <test name="tests">
         <classes>
             <class name="com.alisarrian.GameTest"/>
+            <class name="com.alisarrian.PlayerTest"/>
             <class name="com.alisarrian.TurnQueueTest"/>
         </classes>
     </test>
