@@ -2,12 +2,17 @@ package com.alisarrian;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.fail;
+import static org.testng.Assert.assertEquals;
 
 public class PlayerTest {
 
     @Test
     void shouldReturnXAsDefaultFirstPlayer() {
-        fail("Not implemented yet!");
+        final var player = new Player();
+
+        String actual = player.getName();
+
+        String expected = "X";
+        assertEquals(actual, expected);
     }
 }
