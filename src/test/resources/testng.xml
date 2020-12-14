@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!-- *************************************************************** -->
+<!-- This suite is used to specify the location of the tests         -->
+<!-- This file is required                                           -->
+<!-- *************************************************************** -->
+
+<suite name="testSuite" time-out="10000" verbose="1">
+    <test name="tests">
+        <classes>
+            <class name="com.alisarrian.MyConcatenatorTest"/>
+        </classes>
+    </test>
+</suite>
