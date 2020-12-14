@@ -22,4 +22,9 @@ public class GameTest {
         game.play(1, 4);
     }
 
+    @Test(expectedExceptions = RuntimeException.class)
+    void shouldThrowRuntimeExceptionWhenFieldIsOccupied() {
+        game.play(1, 1);
+        game.play(1, 1);
+    }
 }
