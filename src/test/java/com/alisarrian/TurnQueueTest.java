@@ -3,20 +3,29 @@ package com.alisarrian;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import static org.testng.Assert.assertEquals;
 
 public class TurnQueueTest {
     private TurnQueue turnQueue;
 
+    private static final Player X = new Player("X");
+    private static final Player Y = new Player("Y");
+    private Collection<Player> playersQueue;
+
     @BeforeMethod
     public void setUp() {
-        turnQueue = new TurnQueue();
+        playersQueue = new ArrayList<>();
+        playersQueue.add(X);
+        playersQueue.add(Y);
+        turnQueue = new TurnQueue(playersQueue);
     }
 
     @Test
     void shouldReturnXAsActivePlayer() {
-        Player expected = new Player("X");
         Player actual = turnQueue.getActivePlayer();
-        assertEquals(actual, expected);
+        assertEquals(actual, X);
     }
 }

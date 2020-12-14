@@ -1,10 +1,14 @@
 package com.alisarrian;
 
-public class Player {
+class Player {
     private final String name;
 
-    public Player() {
-        name = "X";
+    Player() {
+        this("X");
+    }
+
+    Player(String name) {
+        this.name = name;
     }
 
     String getName() {
