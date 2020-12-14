@@ -11,6 +11,10 @@ public class Game {
         checkRange(x);
         checkRange(y);
 
+        setOccupied(x, y);
+    }
+
+    private void setOccupied(int x, int y) {
         if (board[x - 1][y - 1] != "") {
             throw new RuntimeException("This field is occupied.");
         } else {
