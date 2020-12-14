@@ -36,4 +36,12 @@ public class TurnQueueTest {
         Player actual = turnQueue.getActivePlayer();
         assertEquals(actual, Y);
     }
+
+    @Test
+    void shouldRollEntireQueue() {
+        turnQueue.next();
+        turnQueue.next();
+        Player actual = turnQueue.getActivePlayer();
+        assertEquals(actual, X);
+    }
 }
