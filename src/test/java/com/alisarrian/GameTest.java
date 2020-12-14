@@ -3,6 +3,8 @@ package com.alisarrian;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.fail;
+
 public class GameTest {
 
     private Game game;
