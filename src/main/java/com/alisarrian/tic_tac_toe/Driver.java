@@ -6,7 +6,7 @@ import com.alisarrian.tic_tac_toe.player.Player;
 import com.alisarrian.tic_tac_toe.player.TurnQueue;
 import com.alisarrian.tic_tac_toe.ui.Console;
 import com.alisarrian.tic_tac_toe.ui.UI;
-import game.TicTacToeGame;
+import com.alisarrian.tic_tac_toe.game.TicTacToeGame;
 
 import java.util.List;
 

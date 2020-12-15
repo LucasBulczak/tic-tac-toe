@@ -1,11 +1,8 @@
 package com.alisarrian.tic_tac_toe.board;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import static com.alisarrian.tic_tac_toe.board.Field.O;
-import static com.alisarrian.tic_tac_toe.board.Field.X;
-import static org.testng.Assert.*;
 
 public class BoardTest {
 
@@ -20,16 +17,16 @@ public class BoardTest {
 
     @Test
     void shouldAddField() {
-        board.add(new Point(0, 0), X);
+        board.add(new Point(0, 0), Field.X);
 
         Field field = board.getGrid()[0][0];
 
-        assertEquals(X, field);
+        Assert.assertEquals(Field.X, field);
     }
 
     @Test(expectedExceptions = IllegalArgumentException.class)
     void shouldIllegalArgumentExceptionWhenYouAddFieldToNotEmptyPlace() {
-        board.add(new Point(0, 0), X);
-        board.add(new Point(0, 0), O);
+        board.add(new Point(0, 0), Field.X);
+        board.add(new Point(0, 0), Field.O);
     }
 }

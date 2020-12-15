@@ -4,57 +4,55 @@ import com.alisarrian.tic_tac_toe.board.Field;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static com.alisarrian.tic_tac_toe.board.Field.*;
-import static com.alisarrian.tic_tac_toe.board.Field.O;
 import static org.testng.Assert.*;
 
-public class FallingDiagonalStrategyTest {
+public class HorizontalStrategyTest {
     private static final Field[][] X_WIN = {
-            {    X, EMPTY, EMPTY},
-            {EMPTY,     X, EMPTY},
-            {    O,     O,     X}
+            {    Field.X,     Field.X,     Field.X},
+            {Field.EMPTY, Field.EMPTY, Field.EMPTY},
+            {    Field.O,     Field.O, Field.EMPTY}
     };
 
     private static final Field[][] O_WIN = {
-            {    O,     X, EMPTY},
-            {    X,     O, EMPTY},
-            {    X,     X,     O}
+            {    Field.X, Field.EMPTY,     Field.X},
+            {    Field.X, Field.EMPTY, Field.EMPTY},
+            {    Field.O,     Field.O,     Field.O}
     };
 
     private static final Field[][] NO_WIN = {
-            {    X, EMPTY, EMPTY},
-            {EMPTY, EMPTY, EMPTY},
-            {EMPTY, EMPTY, EMPTY}
+            {    Field.X, Field.EMPTY, Field.EMPTY},
+            {Field.EMPTY, Field.EMPTY, Field.EMPTY},
+            {Field.EMPTY, Field.EMPTY, Field.EMPTY}
     };
 
     private CheckStrategy sut;
 
     @BeforeMethod
     public void setUp() {
-        sut = new FallingDiagonalStrategy();
+        sut = new HorizontalStrategy();
     }
 
     @Test
     void shouldReturnXWinnerResult() {
-        final var result = sut.matches(X, X_WIN);
+        final var result = sut.matches(Field.X, X_WIN);
         assertEquals(Answer.WINNER, result);
     }
 
     @Test
-    void shouldReturnOWinnerResult() {
-        final var result = sut.matches(O, O_WIN);
+    void shouldReturnWinnerResult() {
+        final var result = sut.matches(Field.O, O_WIN);
         assertEquals(Answer.WINNER, result);
     }
 
     @Test
     void shouldReturnNoWinnerResultForX() {
-        final var result = sut.matches(X, NO_WIN);
+        final var result = sut.matches(Field.X, NO_WIN);
         assertEquals(Answer.NO_WINNER, result);
     }
 
     @Test
     void shouldReturnNoWinnerResultForO() {
-        final var result = sut.matches(O, NO_WIN);
+        final var result = sut.matches(Field.O, NO_WIN);
         assertEquals(Answer.NO_WINNER, result);
     }
 }

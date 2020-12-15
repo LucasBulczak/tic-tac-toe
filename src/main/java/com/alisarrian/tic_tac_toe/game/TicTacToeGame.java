@@ -1,13 +1,13 @@
-package game;
+package com.alisarrian.tic_tac_toe.game;
 
 import com.alisarrian.tic_tac_toe.board.Board;
 import com.alisarrian.tic_tac_toe.board.Point;
 import com.alisarrian.tic_tac_toe.board.Range;
 import com.alisarrian.tic_tac_toe.player.Player;
 import com.alisarrian.tic_tac_toe.player.TurnQueue;
-import com.alisarrian.tic_tac_toe.strategy.Answer;
 import com.alisarrian.tic_tac_toe.strategy.Checker;
 import com.alisarrian.tic_tac_toe.ui.UI;
+import com.alisarrian.tic_tac_toe.strategy.Answer;
 
 public class TicTacToeGame {
     private final Checker checker = new Checker();

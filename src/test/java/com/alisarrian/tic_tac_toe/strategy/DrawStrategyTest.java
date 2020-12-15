@@ -4,21 +4,19 @@ import com.alisarrian.tic_tac_toe.board.Field;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static com.alisarrian.tic_tac_toe.board.Field.*;
-import static com.alisarrian.tic_tac_toe.board.Field.X;
 import static org.testng.Assert.*;
 
 public class DrawStrategyTest {
     private static final Field[][] DRAW = {
-            {X, X, O},
-            {O, O, X},
-            {X, O, X}
+            {Field.X, Field.X, Field.O},
+            {Field.O, Field.O, Field.X},
+            {Field.X, Field.O, Field.X}
     };
 
     private static final Field[][] NO_DRAW = {
-            {X, EMPTY, EMPTY},
-            {EMPTY, EMPTY, EMPTY},
-            {EMPTY, EMPTY, EMPTY}
+            {Field.X, Field.EMPTY, Field.EMPTY},
+            {Field.EMPTY, Field.EMPTY, Field.EMPTY},
+            {Field.EMPTY, Field.EMPTY, Field.EMPTY}
     };
 
     private CheckStrategy sut;
@@ -30,13 +28,13 @@ public class DrawStrategyTest {
 
     @Test
     void shouldReturnDrawResult() {
-        final var result = sut.matches(X, DRAW);
+        final var result = sut.matches(Field.X, DRAW);
         assertEquals(Answer.DRAW, result);
     }
 
     @Test
     void shouldReturnNoWinnerResult() {
-        final var result = sut.matches(X, NO_DRAW);
+        final var result = sut.matches(Field.X, NO_DRAW);
         assertEquals(Answer.NO_WINNER, result);
     }
 }
