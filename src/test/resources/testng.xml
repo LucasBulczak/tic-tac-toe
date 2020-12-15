@@ -9,6 +9,7 @@
     <test name="tests">
         <classes>
             <class name="com.alisarrian.tic_tac_toe.board.BoardTest"/>
+            <class name="com.alisarrian.tic_tac_toe.player.TurnQueueTest"/>
         </classes>
     </test>
 </suite>

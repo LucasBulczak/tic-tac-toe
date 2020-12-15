@@ -1,6 +1,6 @@
 package com.alisarrian.tic_tac_toe.board;
 
-enum Field {
+public enum Field {
     X("X"),
     O("O"),
     EMPTY(".");
