@@ -2,7 +2,7 @@ package com.alisarrian.tic_tac_toe.board;
 
 import java.util.Objects;
 
-class Point {
+public class Point {
 
     private final int x;
     private final int y;

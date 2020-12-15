@@ -1,6 +1,6 @@
 package com.alisarrian.tic_tac_toe.board;
 
-class Range {
+public class Range {
 
     private final int lowerBound;
     private final int upperBound;
