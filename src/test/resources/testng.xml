@@ -13,6 +13,7 @@
             <class name="com.alisarrian.tic_tac_toe.strategy.DrawStrategyTest"/>
             <class name="com.alisarrian.tic_tac_toe.strategy.HorizontalStrategyTest"/>
             <class name="com.alisarrian.tic_tac_toe.strategy.VerticalStrategyTest"/>
+            <class name="com.alisarrian.tic_tac_toe.strategy.RisingDiagonalStrategyTest"/>
         </classes>
     </test>
 </suite>
