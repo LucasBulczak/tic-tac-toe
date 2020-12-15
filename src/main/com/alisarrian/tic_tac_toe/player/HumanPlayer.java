@@ -9,7 +9,7 @@ public class HumanPlayer implements Player {
     private final UI ui;
     private final Field field;
 
-    HumanPlayer(UI ui, Field field) {
+    public HumanPlayer(UI ui, Field field) {
         this.ui = ui;
         this.field = field;
     }

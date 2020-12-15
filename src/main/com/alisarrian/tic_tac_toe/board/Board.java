@@ -1,11 +1,11 @@
 package com.alisarrian.tic_tac_toe.board;
 
-class Board {
+public class Board {
     private final int size;
 
     private Field[][] grid;
 
-    Board(int size) {
+    public Board(int size) {
         this.size = size;
         init();
     }
@@ -20,15 +20,15 @@ class Board {
         }
     }
 
-    Field[][] getGrid() {
+    public Field[][] getGrid() {
         return grid;
     }
 
-    int getSize() {
+    public int getSize() {
         return size;
     }
 
-    void add(Point aPoint, Field playerSign) {
+    public void add(Point aPoint, Field playerSign) {
         throwExceptionWhenFieldIsTaken(aPoint);
         grid[aPoint.getX()][aPoint.getY()] = playerSign;
     }
