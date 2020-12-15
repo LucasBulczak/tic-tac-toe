@@ -11,6 +11,7 @@
             <class name="com.alisarrian.tic_tac_toe.board.BoardTest"/>
             <class name="com.alisarrian.tic_tac_toe.player.TurnQueueTest"/>
             <class name="com.alisarrian.tic_tac_toe.strategy.DrawStrategyTest"/>
+            <class name="com.alisarrian.tic_tac_toe.strategy.HorizontalStrategy"/>
         </classes>
     </test>
 </suite>
