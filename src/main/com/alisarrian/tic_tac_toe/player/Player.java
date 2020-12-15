@@ -4,7 +4,7 @@ import com.alisarrian.tic_tac_toe.board.Field;
 import com.alisarrian.tic_tac_toe.board.Point;
 import com.alisarrian.tic_tac_toe.board.Range;
 
-interface Player {
+public interface Player {
     Point getPoint(Range range);
     Field getSign();
     String toString();
