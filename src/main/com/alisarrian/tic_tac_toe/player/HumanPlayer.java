@@ -5,18 +5,26 @@ import com.alisarrian.tic_tac_toe.board.Point;
 import com.alisarrian.tic_tac_toe.board.Range;
 
 public class HumanPlayer implements Player {
+    private final UI ui;
+    private final Field field;
+
+    HumanPlayer(UI ui, Field field) {
+        this.ui = ui;
+        this.field = field;
+    }
+
     @Override
     public Point getPoint(Range range) {
-        return null;
+        return ui.readNumber(range);
     }
 
     @Override
     public Field getSign() {
-        return null;
+        return field;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return getClass().getSimpleName() + " : " + getSign();
     }
 }
