@@ -26,7 +26,7 @@ public class TicTacToeGame {
         range = new Range(boardSize);
     }
 
-    Player play() {
+    public Player play() {
         boolean noWinners;
         do {
             Answer answer = takeCoordinatesFromPlayer();
