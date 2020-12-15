@@ -3,6 +3,7 @@ package com.alisarrian.tic_tac_toe.player;
 import com.alisarrian.tic_tac_toe.board.Field;
 import com.alisarrian.tic_tac_toe.board.Point;
 import com.alisarrian.tic_tac_toe.board.Range;
+import com.alisarrian.tic_tac_toe.ui.UI;
 
 public class HumanPlayer implements Player {
     private final UI ui;
