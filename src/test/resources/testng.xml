@@ -8,7 +8,7 @@
 <suite name="testSuite" time-out="10000" verbose="1">
     <test name="tests">
         <classes>
-            <class name="com.alisarrian.MyConcatenatorTest"/>
+<!--            <class name="com.alisarrian....Test"/>-->
         </classes>
     </test>
 </suite>
