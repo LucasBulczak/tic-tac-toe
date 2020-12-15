@@ -10,6 +10,7 @@
         <classes>
             <class name="com.alisarrian.tic_tac_toe.board.BoardTest"/>
             <class name="com.alisarrian.tic_tac_toe.player.TurnQueueTest"/>
+            <class name="com.alisarrian.tic_tac_toe.strategy.DrawStrategyTest"/>
         </classes>
     </test>
 </suite>
