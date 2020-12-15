@@ -24,7 +24,7 @@ public class Board {
         return grid;
     }
 
-    int getSize() {
+    public int getSize() {
         return size;
     }
 
