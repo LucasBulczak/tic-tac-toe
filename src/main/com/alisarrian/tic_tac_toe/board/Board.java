@@ -20,7 +20,7 @@ public class Board {
         }
     }
 
-    Field[][] getGrid() {
+    public Field[][] getGrid() {
         return grid;
     }
 
@@ -28,7 +28,7 @@ public class Board {
         return size;
     }
 
-    void add(Point aPoint, Field playerSign) {
+    public void add(Point aPoint, Field playerSign) {
         throwExceptionWhenFieldIsTaken(aPoint);
         grid[aPoint.getX()][aPoint.getY()] = playerSign;
     }
