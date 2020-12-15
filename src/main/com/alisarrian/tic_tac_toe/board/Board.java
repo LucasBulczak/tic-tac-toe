@@ -1,11 +1,11 @@
 package com.alisarrian.tic_tac_toe.board;
 
-class Board {
+public class Board {
     private final int size;
 
     private Field[][] grid;
 
-    Board(int size) {
+    public Board(int size) {
         this.size = size;
         init();
     }
