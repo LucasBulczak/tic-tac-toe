@@ -8,9 +8,13 @@
 <suite name="testSuite" time-out="10000" verbose="1">
     <test name="tests">
         <classes>
-            <class name="com.alisarrian.GameTest"/>
-            <class name="com.alisarrian.PlayerTest"/>
-            <class name="com.alisarrian.TurnQueueTest"/>
+            <class name="com.alisarrian.tic_tac_toe.board.BoardTest"/>
+            <class name="com.alisarrian.tic_tac_toe.player.TurnQueueTest"/>
+            <class name="com.alisarrian.tic_tac_toe.strategy.DrawStrategyTest"/>
+            <class name="com.alisarrian.tic_tac_toe.strategy.HorizontalStrategyTest"/>
+            <class name="com.alisarrian.tic_tac_toe.strategy.VerticalStrategyTest"/>
+            <class name="com.alisarrian.tic_tac_toe.strategy.RisingDiagonalStrategyTest"/>
+            <class name="com.alisarrian.tic_tac_toe.strategy.FallingDiagonalStrategyTest"/>
         </classes>
     </test>
 </suite>
